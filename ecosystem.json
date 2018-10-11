@@ -1,0 +1,28 @@
+{
+  "apps": [
+    {
+      "name": "Ice",
+      "script": "server.js",
+      "env": {
+        "COMMON_VARIABLE": true
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user": "root",
+      "host": ["140.143.244.18"],
+      "ref": "origin/master",
+      "repo": "git@github.com:chenjinxinlove/koa-nuext-weixi.git",
+      "path": "/home/chenjinxin/www/ice/koa-nuext-weixin",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "pre-deploy-local": "echo c",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
